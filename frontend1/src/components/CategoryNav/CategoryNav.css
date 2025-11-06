@@ -1,0 +1,141 @@
+.category-nav {
+  background: var(--white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 88px;
+  z-index: 999;
+  border-bottom: 3px solid var(--light);
+}
+
+.category-nav-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hide scrollbar */
+.category-nav-content::-webkit-scrollbar {
+  display: none;
+}
+
+.category-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 1.1rem;
+  white-space: nowrap;
+  padding-right: 1rem;
+  border-right: 2px solid var(--border);
+}
+
+.category-label .category-icon {
+  font-size: 1.5rem;
+}
+
+.category-list {
+  display: flex;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--light);
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.category-item:hover {
+  background: var(--white);
+  border-color: var(--category-color);
+  color: var(--category-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category-emoji {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.category-item:hover .category-emoji {
+  transform: scale(1.2);
+}
+
+.category-name {
+  font-weight: 600;
+}
+
+/* Active state */
+.category-item.active {
+  background: var(--category-color);
+  color: var(--white);
+  border-color: var(--category-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .category-nav {
+    top: 70px;
+  }
+
+  .category-nav-content {
+    gap: 1rem;
+    padding: 0.75rem 0;
+  }
+
+  .category-label {
+    font-size: 1rem;
+    padding-right: 0.75rem;
+  }
+
+  .category-label span:last-child {
+    display: none;
+  }
+
+  .category-item {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .category-emoji {
+    font-size: 1.25rem;
+  }
+
+  .category-name {
+    display: none;
+  }
+
+  .category-item {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-label {
+    padding-right: 0.5rem;
+  }
+
+  .category-list {
+    gap: 0.5rem;
+  }
+
+  .category-item {
+    padding: 0.5rem 0.75rem;
+  }
+}

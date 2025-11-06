@@ -1,0 +1,100 @@
+export const customerAccounts = [
+  {
+    id: 'cust001',
+    name: 'Rahul Sharma',
+    email: 'rahul.sharma@email.com',
+    phone: '+91-9876543210',
+    joinedDate: '15 Jan 2024',
+    status: 'active',
+    totalOrders: 23,
+    totalSpent: 45780,
+    lastOrderDate: '28 Apr 2024',
+    address: 'Mumbai, Maharashtra'
+  },
+  {
+    id: 'cust002',
+    name: 'Priya Patel',
+    email: 'priya.patel@email.com',
+    phone: '+91-9876543211',
+    joinedDate: '22 Jan 2024',
+    status: 'active',
+    totalOrders: 18,
+    totalSpent: 32450,
+    lastOrderDate: '26 Apr 2024',
+    address: 'Ahmedabad, Gujarat'
+  },
+  {
+    id: 'cust003',
+    name: 'Amit Kumar',
+    email: 'amit.kumar@email.com',
+    phone: '+91-9876543212',
+    joinedDate: '05 Feb 2024',
+    status: 'suspended',
+    totalOrders: 7,
+    totalSpent: 8900,
+    lastOrderDate: '10 Apr 2024',
+    address: 'Delhi, Delhi',
+    suspendedReason: 'Multiple payment disputes'
+  },
+  {
+    id: 'cust004',
+    name: 'Sneha Reddy',
+    email: 'sneha.reddy@email.com',
+    phone: '+91-9876543213',
+    joinedDate: '12 Feb 2024',
+    status: 'active',
+    totalOrders: 31,
+    totalSpent: 67890,
+    lastOrderDate: '29 Apr 2024',
+    address: 'Hyderabad, Telangana'
+  },
+  {
+    id: 'cust005',
+    name: 'Vikram Singh',
+    email: 'vikram.singh@email.com',
+    phone: '+91-9876543214',
+    joinedDate: '20 Feb 2024',
+    status: 'active',
+    totalOrders: 12,
+    totalSpent: 21340,
+    lastOrderDate: '25 Apr 2024',
+    address: 'Jaipur, Rajasthan'
+  },
+  {
+    id: 'cust006',
+    name: 'Anjali Verma',
+    email: 'anjali.verma@email.com',
+    phone: '+91-9876543215',
+    joinedDate: '28 Feb 2024',
+    status: 'active',
+    totalOrders: 9,
+    totalSpent: 15670,
+    lastOrderDate: '22 Apr 2024',
+    address: 'Pune, Maharashtra'
+  },
+  {
+    id: 'cust007',
+    name: 'Arjun Nair',
+    email: 'arjun.nair@email.com',
+    phone: '+91-9876543216',
+    joinedDate: '08 Mar 2024',
+    status: 'suspended',
+    totalOrders: 4,
+    totalSpent: 5600,
+    lastOrderDate: '15 Apr 2024',
+    address: 'Kochi, Kerala',
+    suspendedReason: 'Fraudulent return requests'
+  },
+  {
+    id: 'cust008',
+    name: 'Meera Iyer',
+    email: 'meera.iyer@email.com',
+    phone: '+91-9876543217',
+    joinedDate: '15 Mar 2024',
+    status: 'active',
+    totalOrders: 26,
+    totalSpent: 54320,
+    lastOrderDate: '27 Apr 2024',
+    address: 'Chennai, Tamil Nadu'
+  }
+];
