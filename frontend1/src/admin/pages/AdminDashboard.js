@@ -37,7 +37,8 @@ function AdminDashboard({ isLoggedIn, userName, userRole, onLogout }) {
   const [sellersList, setSellersList] = useState([]);
   const [accountFilter, setAccountFilter] = useState('all');
   
-  // Analytics data state
+  // Analytics data state (used in fetchAdminAnalytics)
+  // eslint-disable-next-line no-unused-vars
   const [analytics, setAnalytics] = useState(null);
   
   // Fraud data state

@@ -22,6 +22,25 @@ const HomePage = ({ isLoggedIn, userName, userRole, onLoginSuccess, onLogout }) 
 
   // Fetch approved products and active banners from API
   useEffect(() => {
+    const fetchRecommendations = async () => {
+      try {
+        if (isLoggedIn && userRole === 'customer') {
+          const userData = JSON.parse(localStorage.getItem('userData') || '{}');
+          if (userData.id) {
+            const response = await fetch(`${API_BASE_URL}/recommendations/${userData.id}?limit=10`);
+            const data = await response.json();
+            
+            if (data.success && data.products) {
+              setRecommendations(data.products);
+              console.log('🎯 Recommendations loaded:', data.source, data.products.length);
+            }
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching recommendations:', error);
+      }
+    };
+
     fetchProducts();
     fetchBanners();
     fetchRecommendations();
@@ -77,24 +96,7 @@ const HomePage = ({ isLoggedIn, userName, userRole, onLoginSuccess, onLogout }) 
     }
   };
 
-  const fetchRecommendations = async () => {
-    try {
-      if (isLoggedIn && userRole === 'customer') {
-        const userData = JSON.parse(localStorage.getItem('userData') || '{}');
-        if (userData.id) {
-          const response = await fetch(`${API_BASE_URL}/recommendations/${userData.id}?limit=10`);
-          const data = await response.json();
-          
-          if (data.success && data.products) {
-            setRecommendations(data.products);
-            console.log('🎯 Recommendations loaded:', data.source, data.products.length);
-          }
-        }
-      }
-    } catch (error) {
-      console.error('Error fetching recommendations:', error);
-    }
-  };
+
 
   // Categorize products
   const categorizeProducts = () => {
